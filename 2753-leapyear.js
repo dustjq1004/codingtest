@@ -19,7 +19,7 @@
 
  */
 const fs = require("fs");
-const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input-2753.txt";
 let input = fs.readFileSync(filePath).toString().split(" ");
 
 input.forEach(year => {
