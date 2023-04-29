@@ -17,6 +17,15 @@ dž는 무조건 하나의 알파벳으로 쓰이고, d와 ž가 분리된 것�
 
 */
 
+/*
+1. word가 없어질때까지 while 반복
+    -1. flag 선언 : word에 하나라도 포함되어있으면 false
+    -2. croatiaList에 포함되어있으면 count++ 후 삭제
+    -3. croatiaList에 포함되는 문자열이 없으면 더이상 반복하지 않도록 분기 처리 
+        -a.영어만 남기도록 삭제
+        -b.count 와 word.length 더한 후 while문을 벗어날 수 있도록 word를 빈값으로 초기화
+*/
+
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input-2941.txt";
 const stdin = fs.readFileSync(filePath).toString().split("\n");
@@ -54,11 +63,3 @@ while(num--) {
     const word = input();
     if(word) console.log(countCroatia(word));
 }
-
-/*
-1. word가 없어질때까지 while 반복
-    1-1. flag 선언 : word에 하나라도 포함되어있으면 false
-    1-2. croatiaList에 포함되어있으면 count++ 후 삭제 
-    1-4. 영어만 남기도록 삭제
-    1-5. flag가 true면 count 와 word.length 더한 후 word 빈값으로 초기화
-*/
