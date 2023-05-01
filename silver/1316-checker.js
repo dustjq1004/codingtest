@@ -12,10 +12,7 @@ const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input-1316.txt";
 const stdin = fs.readFileSync(filePath).toString().split("\n");
 
-const input = (() => {
-    let line = 0;
-    return () => stdin[line++];
-})();
+c
 
 let num = parseInt(input());
 let count = 0;
