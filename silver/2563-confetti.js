@@ -5,6 +5,7 @@ const [confettiNum, ...data] = require("fs").readFileSync(filePath).toString().s
 // 그 다음은 색종이의 x,y 값
 let area = 0;
 let confettiArray = [];
+
 data.forEach(v => {
     let map = new Map();
     let [x,y] = v.split(" ");
